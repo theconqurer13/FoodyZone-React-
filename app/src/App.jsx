@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import TopBar from './components/TopBar';
 import BottomContainer from './components/BottomContainer';
 
-const BASE_URL ="http://localhost:9000/";
+export const BASE_URL ="http://localhost:9000";
 
 const App = () => {
   const [data,setdata] = useState(null);
@@ -22,7 +22,10 @@ const App = () => {
         setError("Unable to fetch data");
       }
     }
-  })
+
+    fetchData();
+
+  },[]);
 
 
 
@@ -41,7 +44,7 @@ const App = () => {
   return (
     <MainContainer>
       <TopBar ref = {topRef}/>
-      <BottomContainer topHeight={topHeight} />
+      <BottomContainer topHeight={topHeight} data = {data}/>
     </MainContainer>
   )
 }

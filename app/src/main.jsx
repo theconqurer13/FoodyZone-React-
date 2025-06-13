@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body{
     background-color:#5A5959;
+    font-family: "Poppins", serif;
   }
   
 
