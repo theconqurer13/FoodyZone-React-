@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styled from 'styled-components'
 import TopContainer from './TopContainer';
 import MiddleContainer from './MiddleContainer';
-const TopBar = () => {
+const TopBar = forwardRef((props,ref) => {
+    
   return (
-    <TopBaar>
+    <TopBaar ref ={ref}>
         <TopContainer/>
         <MiddleContainer/>
     </TopBaar>
   )
-}
+})
 
 export default TopBar;
 
